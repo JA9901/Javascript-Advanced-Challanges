@@ -61,4 +61,8 @@ sortHighToLow([
 ])
 
 // Question number 4
-// On Youtbe , Watch
+// On Youtbe , Watch videos
+
+// Question number 5
+// Call this API "https://jsonplaceholder.typicode.com/posts" and return
+// all the posts by any given user id.
