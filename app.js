@@ -66,3 +66,32 @@ sortHighToLow([
 // Question number 5
 // Call this API "https://jsonplaceholder.typicode.com/posts" and return
 // all the posts by any given user id.
+
+
+async function postsByUser(userId){
+    const promise = await fetch("https://jsonplaceholder.typicode.com/posts")
+    
+    const result = await promise.json()
+
+    const posts = result.filter(element => element.userId === userId)
+
+    console.log(posts)
+}
+
+postsByUser(4)
+
+// Question number 6
+// Call this API "https://jsonplaceholder.typicode.com/todos" and return
+// the first 6 incomplete todo's from the result.
+
+async function firstSixINcomplete(completedStatus){
+    const prom = await fetch("https://jsonplaceholder.typicode.com/todos")
+
+    const res = await prom.json()
+
+    const incompleteTasks = res.filter(elem => !elem.completed).slice(0, 6)
+
+    console.log(incompleteTasks)
+}
+
+firstSixINcomplete(false)
